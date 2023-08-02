@@ -22,16 +22,20 @@ const Quiz = () => {
     setGameState('endScreen')
   }
 
+  const chosenOption=(optionSel)=>{
+    setOptChosen(optionSel)
+  }
+
 
   
   return (
     <div className='Quiz'>
       <h1>{qus.prompt}</h1>
       <div className="options">
-        <button onClick={()=>setOptChosen("A")}>{qus.optionA}</button>
-        <button onClick={()=>setOptChosen("B")}>{qus.optionB}</button>
-        <button onClick={()=>setOptChosen("C")}>{qus.optionC}</button>
-        <button onClick={()=>setOptChosen("D")}>{qus.optionD}</button>
+        <button onClick={()=>{chosenOption("A")}}>{qus.optionA}</button>
+        <button onClick={()=>{chosenOption("B")}}>{qus.optionB}</button>
+        <button onClick={()=>{chosenOption("C")}}>{qus.optionC}</button>
+        <button onClick={()=>{chosenOption("D")}}>{qus.optionD}</button>
       </div>
     {lastQuiz?(
       <button onClick={finisQuiz}>Finish Quiz</button>
