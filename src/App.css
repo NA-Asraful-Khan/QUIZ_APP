@@ -27,8 +27,15 @@
   font-size: 20px;
 }
 
+.itemSel:focus {     
+  background-color:lightcoral; 
+  color:white;   
+}
+
 button:hover {
   cursor: pointer;
+  background-color: cornflowerblue; 
+  color:white; 
 }
 
 .Quiz {

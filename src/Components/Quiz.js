@@ -32,10 +32,10 @@ const Quiz = () => {
     <div className='Quiz'>
       <h1>{qus.prompt}</h1>
       <div className="options">
-        <button onClick={()=>{chosenOption("A")}}>{qus.optionA}</button>
-        <button onClick={()=>{chosenOption("B")}}>{qus.optionB}</button>
-        <button onClick={()=>{chosenOption("C")}}>{qus.optionC}</button>
-        <button onClick={()=>{chosenOption("D")}}>{qus.optionD}</button>
+        <button className='itemSel' onClick={()=>{chosenOption("A")}}>{qus.optionA} </button>
+        <button className='itemSel' onClick={()=>{chosenOption("B")}}>{qus.optionB}</button>
+        <button className='itemSel' onClick={()=>{chosenOption("C")}}>{qus.optionC}</button>
+        <button className='itemSel' onClick={()=>{chosenOption("D")}}>{qus.optionD}</button>
       </div>
     {lastQuiz?(
       <button onClick={finisQuiz}>Finish Quiz</button>
