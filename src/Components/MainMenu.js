@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { QuizContext } from '../Helpers/Context'
+import "../App.css"
 
 const MainMenu = () => {
+  const {gameState, setGameState}= useContext(QuizContext)
   return (
-    <div>MainMenu</div>
+    <div className='Menu'>
+      <button onClick={()=>{
+        setGameState('quiz')
+      }}> Start Quiz</button>
+    </div>
   )
 }
 
